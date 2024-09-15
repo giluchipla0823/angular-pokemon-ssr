@@ -7,8 +7,8 @@ import { NavbarComponent } from './shared/components/navbar/navbar.component';
   standalone: true,
   imports: [RouterOutlet, NavbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'angular-pokemon-ssr';
+  title = 'pokemon-ssr';
 }

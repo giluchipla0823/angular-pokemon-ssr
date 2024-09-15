@@ -7,31 +7,26 @@ import {
 import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
-  selector: 'app-about-page',
-  templateUrl: './about.page.html',
-  styleUrls: ['./about.page.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'page-about',
   standalone: true,
+  imports: [],
+  templateUrl: './about-page.component.html',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AboutPage implements OnInit {
+export default class AboutPageComponent implements OnInit {
   private title = inject(Title);
   private meta = inject(Meta);
 
-  constructor() {}
-
-  ngOnInit() {
+  ngOnInit(): void {
     this.title.setTitle('About Page');
     this.meta.updateTag({
       name: 'description',
-      content: 'About page description',
+      content: 'Este es mi About Page',
     });
-    this.meta.updateTag({
-      name: 'og:title',
-      content: 'About Page',
-    });
+    this.meta.updateTag({ name: 'og:title', content: 'About Page' });
     this.meta.updateTag({
       name: 'keywords',
-      content: 'Hello, About Page, Angular, Universal',
+      content: 'Hola,Mundo,Fernando,Herrera,Curso,Angular,PRO',
     });
   }
 }
